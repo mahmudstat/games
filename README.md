@@ -1,0 +1,2 @@
+# games
+Maintains mathematical games
