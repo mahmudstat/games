@@ -7,7 +7,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     padding: 20px;
 }
@@ -17,9 +16,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px;
+    background-color: #4d4dff;
     color: white;
+    padding: 10px;
+    position: relative;
 }
 
 .logo {
@@ -34,21 +34,25 @@ body {
 }
 
 .motto h1 {
-    margin-bottom: 5px;
     font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
 .motto p {
     font-size: 0.9em;
 }
 
-/* Navigation menu */
+/* Menu styles */
+.site-menu {
+    position: relative;
+}
+
 .site-menu ul {
     list-style: none;
+    display: flex;
 }
 
 .site-menu ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -62,33 +66,77 @@ body {
     color: #ff6347; /* Highlight on hover */
 }
 
-/* Dropdown menu */
-.dropdown {
+.site-menu .dropdown {
     display: none;
     position: absolute;
-    background-color: #333;
-    margin-top: 10px;
-    list-style: none;
+    background-color: #4d4dff;
     padding: 10px 0;
+    list-style: none;
 }
 
-.dropdown li {
+.site-menu .dropdown li {
     display: block;
     padding: 10px 20px;
 }
 
-.dropdown li a {
+.site-menu .dropdown li a {
     color: white;
 }
 
+/* Show dropdown on hover */
 .site-menu ul li:hover .dropdown {
     display: block;
+}
+
+/* Hamburger menu (hidden by default) */
+.menu-toggle {
+    font-size: 2em;
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .site-menu ul {
+        display: none;
+        flex-direction: column;
+        text-align: left;
+        background-color: #4d4dff;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+    }
+
+    .site-menu ul li {
+        margin: 10px 0;
+    }
+
+    /* Show the hamburger menu icon */
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    /* Show the menu when the hamburger icon is clicked */
+    .site-menu.active ul {
+        display: flex;
+    }
 }
 
 /* Footer styles */
 .site-footer {
     text-align: center;
-    background-color: #333;
+    background-color: #4d4dff;
     color: white;
     padding: 10px;
     position: fixed;
