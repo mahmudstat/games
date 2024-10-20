@@ -13,3 +13,18 @@ Bug: One mobile screen, menus still dont have full background. Well, put the ham
 Feature: Add the option that clicking anywhere outside the menu area will toggle off the menu (on small screen)
 
 Feature: Make logo, title and motto and menu center aligned. Also make body of pages center aligned. Give me updated codes of all relevant file. Follow up from earlier prompts.
+
+Bug:
+Make logo, title and motto and menu center aligned but on same line.
+
+Bug:
+
+Make logo, title and motto and menu center aligned. Also make body of pages center aligned. Give me updated codes of all relevant file. Remember out js file is main.js and logo location is images/logo.png. Footer is now directly below header. put it to the bottom of page. On mobile menu is not visible. fix.
+
+On mobile, menu does not show on toggle. Make logo, title and motto and menu center aligned but on same line but keep centered.
+
+Now menu is seen but as horizontal list. make it verticall.
+
+On hovering over Services menu the menus below it are not visible. fix it. ALso give the menu a different but similar color than other header area.
+
+Feature: Make website title: Stat Mania Games, motto: Play Math and Stat Games
