@@ -3,3 +3,13 @@ Make website. Create a separate folder for css and js. Create two sample pages: 
 Make menu more responsive. In small window logo, title and motto should be in one line. menu should be dropdown.  use this color #4d4dff for menu and footer.
 
 Bug: On small screen, color background is not on whole menu text. Some texts are on body background.
+
+Not sloved. alSo some menu texts are spread over two lines. Keep all menu text in one line and apply bg correctly.
+
+Bug: Menu background (also hover) not spread to full text
+
+Bug: One mobile screen, menus still dont have full background. Well, put the hamburger menu sign to the right of title and motto and give full background to text, not body background as now.
+
+Feature: Add the option that clicking anywhere outside the menu area will toggle off the menu (on small screen)
+
+Feature: Make logo, title and motto and menu center aligned. Also make body of pages center aligned. Give me updated codes of all relevant file. Follow up from earlier prompts.

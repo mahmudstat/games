@@ -25,6 +25,13 @@ function setupMenuToggle() {
     menuToggle.addEventListener('click', function() {
         siteMenu.classList.toggle('active');
     });
+
+    // Close menu when clicking outside
+    window.addEventListener('click', function(event) {
+        if (!menuToggle.contains(event.target) && !siteMenu.contains(event.target)) {
+            siteMenu.classList.remove('active');
+        }
+    });
 }
 
 // Call the functions on page load

@@ -5,32 +5,56 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    width: 100%; /* Ensure full width */
+    margin-top: 20px; /* Optional: add some spacing from the header */
 }
 
 /* Header styles */
 .site-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center all items horizontally */
     background-color: #4d4dff;
     color: white;
     padding: 10px;
-    position: relative;
+    position: relative; /* Allow positioning of the menu */
 }
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: center; /* Align logo and motto vertically */
+    justify-content: center; /* Center logo and motto */
+    margin-right: 20px; /* Space between logo and menu */
 }
 
 .logo-img {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: 10px; /* Space between logo and motto */
+}
+
+.motto {
+    text-align: center; /* Center align title and motto */
 }
 
 .motto h1 {
@@ -42,41 +66,60 @@ body {
     font-size: 0.9em;
 }
 
+.menu-toggle {
+    font-size: 2em;
+    display: none; /* Initially hide the toggle */
+    cursor: pointer;
+    color: white;
+    margin-left: 20px; /* Space from the motto */
+}
+
 /* Menu styles */
 .site-menu {
-    position: relative;
+    display: flex; /* Horizontal layout for menu */
+    justify-content: center; /* Center align menu items */
+    align-items: center; /* Align menu items vertically */
 }
 
 .site-menu ul {
     list-style: none;
     display: flex;
+    padding: 0; /* Remove default padding */
 }
 
 .site-menu ul li {
-    margin: 0 15px;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Allow positioning of dropdown */
 }
 
 .site-menu ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
+    display: block;
+    padding: 10px 20px;
+    background-color: #4d4dff; /* Ensure background color spans full width */
+    white-space: nowrap;
 }
 
 .site-menu ul li:hover > a {
-    color: #ff6347; /* Highlight on hover */
+    background-color: #333; /* Hover background color */
 }
 
+/* Dropdown menu styles */
 .site-menu .dropdown {
     display: none;
     position: absolute;
-    background-color: #4d4dff;
+    background-color: #6a6aff; /* Different but similar color for dropdown */
     padding: 10px 0;
     list-style: none;
+    z-index: 1000; /* Ensure dropdown is above other elements */
 }
 
 .site-menu .dropdown li {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 0;
 }
 
 .site-menu .dropdown li a {
@@ -85,65 +128,43 @@ body {
 
 /* Show dropdown on hover */
 .site-menu ul li:hover .dropdown {
-    display: block;
-}
-
-/* Hamburger menu (hidden by default) */
-.menu-toggle {
-    font-size: 2em;
-    display: none;
-    cursor: pointer;
-    color: white;
+    display: block; /* Show dropdown when parent is hovered */
 }
 
 /* Responsive styling for small screens */
 @media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        text-align: center;
+    .menu-toggle {
+        display: block; /* Show the toggle button on small screens */
+        margin-left: 20px; /* Space from the motto */
     }
 
-    .logo {
-        margin-bottom: 10px;
+    .site-menu {
+        display: none; /* Initially hide the menu on small screens */
+        flex-direction: column; /* Stack menu items vertically */
+        background-color: #4d4dff; /* Background color for dropdown */
+        position: absolute;
+        width: 100%; /* Ensure full-width dropdown */
+        left: 0;
+        top: 100%; /* Position just below the header */
+        z-index: 999;
+    }
+
+    .site-menu.active {
+        display: flex; /* Show the menu when active */
     }
 
     .site-menu ul {
-        display: none;
-        flex-direction: column;
-        background-color: #4d4dff;
-        position: absolute;
-        width: 100%; /* Full-width dropdown */
-        left: 0;
-        top: 100%;
-        z-index: 999; /* Ensure menu is on top of content */
+        flex-direction: column; /* Make menu items stack vertically */
+        width: 100%; /* Ensure full width for menu */
     }
 
     .site-menu ul li {
-        margin: 0; /* Remove margin to avoid gaps */
+        width: 100%; /* Ensure each menu item takes full width */
     }
 
     .site-menu ul li a {
-        display: block;
-        padding: 10px 15px;
-        width: 100%;
-        background-color: #4d4dff; /* Background covers full width */
-        white-space: nowrap; /* Prevent text from wrapping */
-        overflow: hidden; /* Hide overflow text */
-        text-overflow: ellipsis; /* Add ellipsis if text overflows */
-    }
-
-    .site-menu ul li a:hover {
-        background-color: #333; /* Change background color on hover */
-    }
-
-    /* Show the hamburger menu icon */
-    .menu-toggle {
-        display: inline-block;
-    }
-
-    /* Show the menu when the hamburger icon is clicked */
-    .site-menu.active ul {
-        display: flex;
+        padding: 15px; /* Add more padding for vertical items */
+        text-align: center; /* Center the text */
     }
 }
 
@@ -153,7 +174,4 @@ body {
     background-color: #4d4dff;
     color: white;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
