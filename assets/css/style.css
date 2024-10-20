@@ -1,0 +1,97 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Header styles */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.motto h1 {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.motto p {
+    font-size: 0.9em;
+}
+
+/* Navigation menu */
+.site-menu ul {
+    list-style: none;
+}
+
+.site-menu ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.site-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.site-menu ul li:hover > a {
+    color: #ff6347; /* Highlight on hover */
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    margin-top: 10px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px 20px;
+}
+
+.dropdown li a {
+    color: white;
+}
+
+.site-menu ul li:hover .dropdown {
+    display: block;
+}
+
+/* Footer styles */
+.site-footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
