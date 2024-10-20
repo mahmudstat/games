@@ -113,13 +113,25 @@ body {
         text-align: left;
         background-color: #4d4dff;
         position: absolute;
-        width: 100%;
+        width: 100%; /* Make sure the menu occupies full width */
         left: 0;
         top: 100%;
+        z-index: 999; /* Ensure it appears on top of the content */
     }
 
     .site-menu ul li {
-        margin: 10px 0;
+        margin: 0; /* Remove margin to prevent gaps in the background */
+    }
+
+    .site-menu ul li a {
+        display: block;
+        padding: 10px 15px;
+        width: 100%;
+        background-color: #4d4dff; /* Ensure background color spans full width */
+    }
+
+    .site-menu ul li a:hover {
+        background-color: #333; /* Change background color on hover */
     }
 
     /* Show the hamburger menu icon */

@@ -1,0 +1,5 @@
+Make website. Create a separate folder for css and js. Create two sample pages: index and about. Other pages can be created manually later by me. Make common format for all pages. They should have common menu, header, and footer. These can be saved in external html/js files, and will be be referred,, not repeated whole contents in every page. The top should contain website logo and motto on the left and menus (dropdown) on the right.
+
+Make menu more responsive. In small window logo, title and motto should be in one line. menu should be dropdown.  use this color #4d4dff for menu and footer.
+
+Bug: On small screen, color background is not on whole menu text. Some texts are on body background.
