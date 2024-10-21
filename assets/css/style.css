@@ -12,9 +12,14 @@ html, body {
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+   /* background-image: url("../../images/bg.jpeg"); */
+    background-size: 100%;
+    background-image: conic-gradient(at 85% 55%, white, green, white);
+    opacity: 0.9;
     padding: 20px;
     display: flex;
     flex-direction: column; /* Stack children vertically */
+   /* text-shadow: 2px 2px 8px #4dff4d; */
 }
 
 /* Main content area */
@@ -35,7 +40,7 @@ body {
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center all items horizontally */
     background-color: #4d4dff;
-    color: white;
+    color: #ffffb3;
     padding: 10px;
     position: relative; /* Allow positioning of the menu */
 }
@@ -94,7 +99,7 @@ body {
 }
 
 .site-menu ul li a {
-    color: white;
+    color: #ffff66;
     text-decoration: none;
     font-size: 1.1em;
     display: block;
@@ -104,7 +109,7 @@ body {
 }
 
 .site-menu ul li:hover > a {
-    background-color: #333; /* Hover background color */
+    background-color: #0080ff; /* Hover background color */
 }
 
 /* Dropdown menu styles */
@@ -168,10 +173,38 @@ body {
     }
 }
 
+/* Button styles */
+
+button, input {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-align: center;
+           /* text-shadow: 2px 2px 5px red; */
+        }
+
 /* Footer styles */
 .site-footer {
     text-align: center;
     background-color: #4d4dff;
     color: white;
     padding: 10px;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* List */
+
+li {
+    color: #134d00;
+    text-shadow: 2px 2px 8px #1a8cff;
 }
